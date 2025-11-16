@@ -1,4 +1,4 @@
-name: Black Duck Sca scan with Simplified Example
+name: Black Duck Sca scan for Basic Users
                                                                                                                                                                                                                                          
 on:
   push:
@@ -22,10 +22,7 @@ jobs:
         ### SCANNING: Required fields
         blackducksca_url: ${{ vars.BLACKDUCKSCA_URL }}
         blackducksca_token: ${{ secrets.BLACKDUCKSCA_TOKEN }}
-
-        ### BREAKING THE BUILD
-        blackducksca_scan_failure_severities: 'BLOCKER,CRITICAL'
-        
+  
         ### FIX PULL REQUEST CREATION
         blackducksca_fixpr_enabled: true
         
